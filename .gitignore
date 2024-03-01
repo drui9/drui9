@@ -1,0 +1,13 @@
+env/
+venv/
+.env/
+.venv/
+__pycache__/
+*.pyc
+id_rsa
+*.pub
+*.pem
+*.csv
+node_modules/
+*.lockb
+druid/
