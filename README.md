@@ -1,16 +1,23 @@
-## Hi there 👋
+## Greetings! 👋
+```monospace
+I celebrate myself, and sing myself,
+And what I assume you shall assume,
+For every atom belonging to me as good belongs to you.
+I loafe and invite my soul,
+I lean and loafe at my ease observing a spear of summer grass.
 
-      - 🔭 I’m currently a FREELANCER, forex algo-trader and a Software Engineering Student in the ALX Software Engineering Program.
-      - 🌱 I’m currently exploring React, Artificial Generative Intelligence(AGI) and financial markets analysis.
-      - My stacks are:
-	- Full-stack: Python, NodeJS, Redis, NoSQL, React/ReactNative, CI/CD & System Administration.
-	- MQL4/5(for trading algorithms), with Lua and python scripting.
-      - 📫 You can Reach me via:
-      	@mail < ngaira14nelson@gmail.com > 
-       	@twitter: drui909
+My tongue, every atom of my blood, form’d from this soil, this air,
+Born here of parents born here from parents the same, and their parents the same,
+I, now `twenty-seven` years old in perfect health begin,
+Hoping to cease not till death …
 
-## Github Stats
-[![Nelson's GitHub stats](https://github-readme-stats.vercel.app/api?username=drui9)](https://github.com/anuraghazra/github-readme-stats)
+        - Adapted from `Walt Whitman's` `Song of Myself`
+```
 
+
+```monospace
+Yours in the hope of eternal life:
+    #drui9
+```
 ## Language Stats
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=drui9&hide_progress=true)
