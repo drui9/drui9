@@ -1,54 +1,52 @@
 syntax enable
 
-set mouse=
 set wrap!
+set number
+set mouse=
 set tabstop=4
 set autoindent
 set noswapfile
 " set cursorline
-set scrolloff=12
+set scrolloff=16
 set shiftwidth=4
 set softtabstop=4
 set encoding=utf-8
 set fileformat=unix
-set number relativenumber
 set backspace=indent,eol,start
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'karb94/neoscroll.nvim'
+Plug 'nvim-lua/plenary.nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
+Plug 'jacoborus/tender.vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'scrooloose/NERDTree'
 Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-fugitive'
 Plug 'morhetz/gruvbox'
-Plug 'jacoborus/tender.vim'
-" Plug 'dense-analysis/ale'
-" Plug 'JuanDAC/betty-ale-vim'
 call plug#end()
 
 " customizations
-colorscheme tender
+colorscheme evening
 let g:NERDTreeMinimal =1
 let NERDTreeQuitOnOpen =0
+let g:airline_theme='angr'
 let g:closetag_shortcut = '>'
-let g:airline_theme='ayu_mirage'
 let g:closetag_filenames = '*.html,*.xhtml'
-" let g:ale_linters = {'c': ['betty-style', 'betty-doc']}
 
 " load  coc keymap
 source ~/.config/nvim/keymap.vim
 
 " misc shortcuts
-inoremap c[ <Esc>
 nmap . :suspend <CR>
 nmap nt :NERDTreeToggle<CR>
-
-" open file management
 nmap qq :q <CR>
 
 " screen splitting
@@ -58,29 +56,28 @@ nmap sp :split <CR>
 " tabs
 nmap > :tabnew <CR>
 nmap < :tabclose <CR>
-
-" switch split screens
-nmap st <C-w>x <CR>
+nmap tr :tabnext<CR>
+nmap tl :tabprevious<CR>
+nmap tb :Telescope buffers<CR>
 
 " cursor oops
+nmap cw <C-w>x <CR>
 nmap cu <C-w><Up> <CR>
+nmap cl <C-w><Left> <CR>
 nmap cd <C-w><Down> <CR>
 nmap cr <C-w><Right> <CR>
-nmap cl <C-w><Left> <CR>
-
-" terminal oops
-nmap tt :!mate-terminal <CR><CR>
 
 " git oops
 nmap gl :!git log --oneline -n 5<CR>
-nmap gs :!git status <CR>
 nmap gb :!git branch --list<CR>
+nmap gs :!git status <CR>
 
 " build tools
 nmap mk :!make <CR>
+nmap mc :!make clean <CR>
 
-" disable arrow keys
-" also disables two-finger scrolling on laptop trackpads
+" disable arrow keys &
+" two-finger scrolling on laptop trackpads
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
