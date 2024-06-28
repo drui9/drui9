@@ -7,11 +7,14 @@ set tabstop=4
 set autoindent
 set noswapfile
 " set cursorline
-set scrolloff=16
+set scrolloff=10
 set shiftwidth=4
 set softtabstop=4
 set encoding=utf-8
 set fileformat=unix
+set foldcolumn=1
+set foldmarker=<>,</>
+set foldmethod=marker
 set backspace=indent,eol,start
 
 call plug#begin('~/.config/nvim/autoload/plugged')
@@ -59,6 +62,11 @@ nmap < :tabclose <CR>
 nmap tr :tabnext<CR>
 nmap tl :tabprevious<CR>
 nmap tb :Telescope buffers<CR>
+
+" folding
+nmap fu za<CR>
+nmap fr zR<CR>
+nmap fm zM<CR>
 
 " cursor oops
 nmap cw <C-w>x <CR>
